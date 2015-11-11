@@ -2062,9 +2062,6 @@ if (typeof jQuery === 'undefined') {
 				};
 			}), a.jQuery = a.$ = f;
 		})(window);
-
-		console.log('Setting $.noConflict()');
-		$.noConflict();
 	});
 } else {
 	console.log('jQuery was already present!');
