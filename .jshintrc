@@ -13,8 +13,7 @@
   "latedef": true,
   "newcap": true,
   "noarg": true,
-  "quotmark": "single",
-  "undef": true,
+  "quotmark": "single",  
   "unused": true,
   "strict": true,
   "globals" : {
