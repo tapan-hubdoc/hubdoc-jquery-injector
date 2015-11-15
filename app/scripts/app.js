@@ -8,8 +8,10 @@ function injectScript(func) {
 	script.parentNode.removeChild(script);
 }
 
-if (typeof jQuery === 'undefined') {
-	injectScript(function () {
+//TS: content scripts execute in isolated world. but we have access to DOM elements of host.
+//    so, create script element on the DOM of host, and get our custom code to execute by setting the text content of the script element with our code
+injectScript(function () {
+	if (typeof jQuery === 'undefined') {
 		console.log("Injecting jQuery1.6.1");
 
 		(function (a, b) {
@@ -2062,10 +2064,10 @@ if (typeof jQuery === 'undefined') {
 				};
 			}), a.jQuery = a.$ = f;
 		})(window);
-	});
-} else {
-	console.log('jQuery was already present!');
-}
+	} else {
+		console.log('jQuery was already present!');
+	}
+});
 
 // function injectJquery(event, version='1.6.1'){	
 // 	if (typeof jQuery === 'undefined') {

@@ -1,6 +1,6 @@
 {
   "name": "__MSG_appName__",
-  "version": "0.0.13",
+  "version": "0.0.16",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
@@ -20,7 +20,8 @@
         "http://*/*",
         "https://*/*",
         "file://*/*",
-        "*://*/*"
+        "*://*/*",
+        "<all_urls>"
       ],
       "js": [
         "scripts/app.js"
@@ -33,7 +34,8 @@
     "contextMenus",
     "http://*/*",
     "https://*/*",
-    "file://*/*"
+    "file://*/*",
+    "<all_urls>"
   ],
   "browser_action": {
     "default_icon": {
